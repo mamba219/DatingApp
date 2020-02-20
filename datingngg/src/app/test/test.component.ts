@@ -1,25 +1,47 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
-  selector: 'app-test',
-  templateUrl: './test.component.html',
-  styleUrls: ['./test.component.css']
+  selector: 'app-Test',
+  templateUrl: './Test.component.html',
+  styleUrls: ['./Test.component.css'],
+
 })
 export class TestComponent implements OnInit {
 
-  constructor() {}
-    public mamba = 'xmen';
-   public  istrue = true;
-    public name = 'Hindi is not a national language';
-   public List = ['mamba', 'jamba', 'kamba'];
-   corona = 'Virus_corona';
-   BlackDeath = 'Plaugeu is coming and';
-   @Input() public paser;
-   @Output() public eve = new EventEmitter();
-ngOnInit() {
-}
-fireEve() {
-  this.eve.emit('Sending text from child to parent');
-}
+  public list:any = []
+
+  constructor() { 
+    console.log("form created!")
+  }
+
+  ngOnInit() {
+    this.list =[
+      {
+         "type": "email",
+         "name": "email",
+          "value": "",     "placeholder": "your email here",
+           "required": true
+      },
+      {
+         "type": "FirstName",
+         "name": "FirstName",
+          "value": "",     "placeholder": "your FirstName here",
+           "required": true
+      },
+      {
+         "type": "LastName",
+         "name": "LastName",
+          "value": "",     "placeholder": "your email here",
+           "required": false
+      },
+      {
+         "type": "password",
+         "name": "password",
+          "value": "",     "placeholder": "your password here",
+           "required": true
+      }
+      ]
+  }
 
 }
