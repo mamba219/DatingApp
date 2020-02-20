@@ -13,8 +13,9 @@
    
    <h2 *ngFor="let item of List">  <!-- it's regarding ngFor-->
    <li>I am a {{item}}</li>
-   <hr />
+   
    </h2>
+   <hr />
     <div [ngSwitch]="corona">  <!--it's regarding ngSWITCH-->
     <div *ngSwitchCase="corona">"{{corona}} is spreading"</div>
      <div *ngSwitchCase="BlackDeath">"{{BlackDeath}}+ 'its spreading'"</div>
