@@ -1,3 +1,29 @@
-<p *ngFor="let x of values">
-{{x.id}},{{x.name}}
-</p>
+<h1>
+
+    {{mamba}} is fish guy  <!-- binding data from ts to UI(view)-->
+   <input [(ngModel)]="name" [disabled] ="false" [id]="mamba" type="text"> <br /> <!--its regarding bidirectional binding-->
+   value: {{name}}<br />
+   <hr />
+   <h2 *ngIf="istrue; then blacktick; else blackfish"></h2>  <!-- i's regarding ngIF-->
+   
+   <ng-template #blacktick>Bad Guy - ifblacktick  </ng-template>
+   <ng-template #blackfish>Bad Guy - thenblackfish</ng-template>
+   
+   <hr />
+   
+   <h2 *ngFor="let item of List">  <!-- it's regarding ngFor-->
+   <li>I am a {{item}}</li>
+   <hr />
+   </h2>
+    <div [ngSwitch]="corona">  <!--it's regarding ngSWITCH-->
+    <div *ngSwitchCase="corona">"{{corona}} is spreading"</div>
+     <div *ngSwitchCase="BlackDeath">"{{BlackDeath}}+ 'its spreading'"</div>
+     <div *ngSwitchDefault>output2</div>
+   </div>
+   <hr />
+    <p>{{paser}}</p>  <!-- it's regarding propagating parent data into child-->
+   <hr />
+   <button (click)='fireEve()'>click me</button>  <!--sending text from child to parent-->
+   <hr >
+   <!-- usage of pipes | is or symbol it manipulates the view. -->
+   <h2>{{name | uppercase}}</h2> <!--so many properties to manipulate view-->

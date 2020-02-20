@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -7,17 +7,20 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./value.component.css']
 })
 export class ValueComponent implements OnInit {
-  values: any;
-  constructor(private http: HttpClient) { }
-
+  constructor() {}
+    public mamba = 'xmen';
+   public  istrue = true;
+    public name = 'Hindi is not a national language';
+   public List = ['mamba', 'jamba', 'kamba'];
+   corona = 'Virus_corona';
+   BlackDeath = 'Plaugeu is coming and';
+   @Input() public paser;
+   @Output() public eve = new EventEmitter();
   ngOnInit() {
-    this.getValue();
-  }
- getValue() {
-   this.http.get('http://localhost:5000/api/values').subscribe(Response => {
-    this.values = Response;
-   }, error => {
-     console.log(error);
-  });
+
  }
+ fireEve() {
+  this.eve.emit('Sending text from child to parent');
 }
+}
+

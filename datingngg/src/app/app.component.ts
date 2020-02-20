@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mambacompany';
+   public mamba = ' parent property is propagating through the child';
+  public x: any ;
 }
