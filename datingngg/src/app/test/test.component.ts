@@ -9,39 +9,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  public list:any = []
+  public list: any = [];
 
-  constructor() { 
-    console.log("form created!")
+  constructor() {
+    console.log('form created!');
   }
 
   ngOnInit() {
-    this.list =[
+    this.list = [
       {
-         "type": "email",
-         "name": "email",
-          "value": "",     "placeholder": "your email here",
-           "required": true
+         type: 'email',
+         name: 'email',
+          value: '',     placeholder: 'your email here',
+           required: true
       },
       {
-         "type": "FirstName",
-         "name": "FirstName",
-          "value": "",     "placeholder": "your FirstName here",
-           "required": true
+         type: 'FirstName',
+         name: 'FirstName',
+          value: '',     placeholder: 'your FirstName here',
+           required: true
       },
       {
-         "type": "LastName",
-         "name": "LastName",
-          "value": "",     "placeholder": "your email here",
-           "required": false
+         type: 'LastName',
+         name: 'LastName',
+          value: '',     placeholder: 'your email here',
+           required: false
       },
       {
-         "type": "password",
-         "name": "password",
-          "value": "",     "placeholder": "your password here",
-           "required": true
+         type: 'password',
+         name: 'password',
+          value: '',     placeholder: 'your password here',
+           required: true
       }
-      ]
+      ];
   }
 
 }
